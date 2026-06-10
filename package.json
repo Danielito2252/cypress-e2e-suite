@@ -1,0 +1,24 @@
+{
+  "name": "cypress-e2e-suite",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene la arquitectura estrella de pruebas automatizadas para el ecosistema del proyecto. Diseñado bajo el patrón de diseño Page Object Model (POM) para garantizar escalabilidad, mantenibilidad y robustez en la validación de software.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielito2252/cypress-e2e-suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Danielito2252/cypress-e2e-suite/issues"
+  },
+  "homepage": "https://github.com/Danielito2252/cypress-e2e-suite#readme",
+  "devDependencies": {
+    "cypress": "^15.17.0"
+  }
+}
