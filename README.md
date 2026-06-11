@@ -1,169 +1,216 @@
-Cypress End-to-End & API Testing Suite 🚀
+# 🚀 Cypress End-to-End & API Testing Suite
+![Cypress](https://img.shields.io/badge/Cypress-v13+-17202C?logo=cypress&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-v18+-339933?logo=node.js&logoColor=white)
+![Mocha](https://img.shields.io/badge/Mocha-Awesome%20Reporter-8D6748?logo=mocha&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?logo=github-actions&logoColor=white)
+![CI](https://github.com/Danielito2252/cypress-e2e-suite/actions/workflows/cypress.yml/badge.svg)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Suite automatizada de pruebas para validar la calidad de software tanto en la interfaz de usuario (Frontend/E2E) como en la capa de servicios (Backend/API). El proyecto está construido con Cypress, siguiendo principios de Arquitectura Limpia, Page Object Model (POM) e Integración Continua (CI/CD).
+Suite automatizada de pruebas para validar la calidad de software tanto en la interfaz de usuario (Frontend/E2E) como en la capa de servicios (Backend/API).
 
-📋 Características principales
+El proyecto está construido con **Cypress**, siguiendo principios de:
 
-Pruebas End-to-End (E2E)
+- Arquitectura Limpia
+- Page Object Model (POM)
+- Integración Continua (CI/CD)
 
-Cobertura de flujos críticos de usuario como autenticación, gestión de tareas y creación de flujos.
+---
 
-Pruebas de API
+## 📋 Características Principales
 
-Validaciones de integración y consististencia de datos en endpoints HTTP, incluyendo códigos de estado 200, 201 y 400.
+### 🧪 Pruebas End-to-End (E2E)
 
-Reportes dinámicos
+Cobertura de flujos críticos de usuario como:
 
-Integración con Mocha Awesome Reporter para generar reportes visuales útiles en entornos locales y pipelines de CI/CD.
+- Autenticación
+- Gestión de tareas
+- Creación de flujos
 
-Arquitectura escalable
+### 🔌 Pruebas de API
 
-Organización modular basada en Page Object Model (POM) para facilitar el mantenimiento y crecimiento de la suite.
+Validaciones de integración y consistencia de datos en endpoints HTTP:
 
-🛠️ Stack tecnológico
+- 200 OK
+- 201 Created
+- 400 Bad Request
 
-Tecnología
+### 📊 Reportes Dinámicos
 
-	
+Integración con **Mocha Awesome Reporter** para generar reportes visuales en entornos locales y pipelines CI/CD.
 
-Uso
+### 🏗️ Arquitectura Escalable
 
+Organización modular basada en **Page Object Model (POM)** para facilitar el mantenimiento y crecimiento de la suite.
 
+---
 
+## 🛠️ Stack Tecnológico
 
-Cypress (v13+)
+| Tecnología | Uso |
+|------------|-----|
+| Cypress v13+ | Framework de automatización |
+| JavaScript / TypeScript | Lenguaje de desarrollo |
+| Mocha Awesome Reporter | Generación de reportes |
 
-	
+---
 
-Framework de automatización
+## 📁 Estructura del Proyecto
 
-
-
-
-JavaScript / TypeScript
-
-	
-
-Lenguaje de desarrollo
-
-
-
-
-Mocha Awesome Reporter
-
-	
-
-Generación de reportes
-
-📁 Estructura del proyecto
-
-Organización principal de directorios y archivos.
-
-Estructura
-
+```text
 cypress-e2e-suite/
+│
 ├── cypress/
-│   ├── api/                 # Módulo de Aseguramiento de Calidad para Servicios
-│   │   └── api_spec.cy.js   # Pruebas automatizadas de Endpoints (API REST)
-│   └── e2e/                 # Módulo de Pruebas de Interfaz de Usuario
-│       └── auth.cy.js       # Pruebas de Flujos de Autenticación y Formularios
-├── .gitignore               # Exclusión estricta de entornos locales (node_modules)
-├── cypress.config.js        # Configuración global del motor de Cypress
-├── LICENSE                  # Licencia de código abierto MIT
-├── package-lock.json        # Registro estricto del árbol de dependencias
-└── package.json             # Manifiesto del proyecto y scripts de ejecución
+│   ├── api/
+│   │   └── api_spec.cy.js
+│   │
+│   ├── e2e/
+│   │   ├── auth.cy.js
+│   │   └── tasks.cy.js
+│   │
+│   ├── fixtures/
+│   └── support/
+│
+├── .github/
+│   └── workflows/
+│
+├── .gitignore
+├── cypress.config.js
+├── package.json
+├── package-lock.json
+├── LICENSE
+└── README.md
+```
 
-📊 Arquitectura de la suite de pruebas
+---
 
-Relación entre el runner de Cypress y las suites E2E y API.
+## 📊 Arquitectura de la Suite de Pruebas
 
-Arquitectura
+```text
+                    CYPRESS RUNNER
+                           │
+          ┌────────────────┴────────────────┐
+          │                                 │
+          ▼                                 ▼
 
-       ┌────────────────────────────────────────────────────────┐
-       │                   CYPRESS RUNNER                       │
-       └──────────────────────────┬─────────────────────────────┘
-                                  │
-         ┌────────────────────────┴────────────────────────┐
-         ▼                                                 ▼
-📂 cypress/e2e/auth.cy.js                        📂 cypress/api/api_spec.cy.js
-├─ Flujo 1: Escritura de credenciales            ├─ GET /posts  → 200 OK
-└─ Flujo 2: Envío de formularios                 └─ POST /posts → 201 Created
+ cypress/e2e/auth.cy.js      cypress/api/api_spec.cy.js
 
-🚀 Instalación y ejecución local
+ - Login de usuario          - GET /posts  → 200 OK
+ - Formularios               - POST /posts → 201 Created
+```
 
-Si quieres probar esta suite en tu computadora, sigue estos pasos.
+---
 
-Prerrequisitos
+## 🚀 Instalación y Ejecución Local
 
-Node.js v18 o superior
-Git
+### Prerrequisitos
 
-1. Clonar el repositorio
+- Node.js v18 o superior
+- Git
 
+### 1️⃣ Clonar el repositorio
+
+```bash
 git clone https://github.com/Danielito2252/cypress-e2e-suite.git
+```
 
-2. Entrar al directorio del proyecto
+### 2️⃣ Acceder al proyecto
 
+```bash
 cd cypress-e2e-suite
+```
 
-3. Instalar dependencias
+### 3️⃣ Instalar dependencias
 
+```bash
 npm install
+```
 
-4. Ejecutar las pruebas
+### 4️⃣ Ejecutar las pruebas
 
-Elige una de las siguientes modalidades según tu necesidad.
+#### Modo Interactivo
 
-Modo interactivo (UI de Cypress)
-
-Permite ver el navegador ejecutando las pruebas en tiempo real.
-
+```bash
 npx cypress open
+```
 
-Modo headless (CLI / CI-CD)
+#### Modo Headless
 
-Ideal para pipelines de integración continua y ejecución en segundo plano.
-
+```bash
 npx cypress run
+```
 
-📈 Reportes de ejecución
+---
 
-La suite utiliza Mocha Awesome Reporter para generar reportes visuales de las ejecuciones.
+## 📈 Reportes
 
-Después de correr las pruebas, los reportes se generan automáticamente en el directorio configurado por Cypress y el reporter.
+Después de cada ejecución se generan reportes automáticos mediante:
 
-🛡️ Buenas prácticas implementadas
+- Mocha Awesome Reporter
 
-Page Object Model (POM)
+Estos reportes facilitan el análisis de resultados y fallos durante la ejecución de pruebas.
 
-Separación de lógica de pruebas y elementos de UI para mejorar la mantenibilidad.
+---
 
-Git Flow
+## 🛡️ Buenas Prácticas Implementadas
 
-Uso de ramas main y develop para simular entornos de producción y staging.
+### Git Flow
 
-Aislamiento de entorno
+Uso de ramas:
 
-Configuración estricta de .gitignore para evitar subir dependencias locales o variables sensibles.
+- main
+- develop
 
-Pruebas independientes
+### Aislamiento de Entorno
 
-Cada prueba está diseñada para ejecutarse de forma aislada y repetible.
+Configuración estricta de:
 
-📌 Próximas mejoras
+- `.gitignore`
+- Variables de entorno
 
-Migración completa a TypeScript.
+### Pruebas Independientes
 
-Integración con dashboards de calidad (Allure, Cypress Cloud, etc.).
+Cada prueba puede ejecutarse de forma aislada y repetible.
 
-Paralelización de pruebas en CI/CD.
+### Arquitectura POM
 
-👤 Autor
+Separación de:
 
-Desarrollado por Herberth Barrios
+- Elementos de interfaz
+- Lógica de negocio
+- Casos de prueba
 
-GitHub: github.com/Danielito2252
+---
 
-📄 Licencia
+## 📌 Resumen
 
-Este proyecto se distribuye bajo la licencia MIT.
+| Característica | Estado |
+|---------------|---------|
+| Pruebas E2E | ✅ |
+| Pruebas API | ✅ |
+| Arquitectura POM | ✅ |
+| CI/CD | ✅ |
+| Reportes Automatizados | ✅ |
+| TypeScript | 🚧 En progreso |
+
+## 🔮 Próximas Mejoras
+
+- Migración completa a TypeScript.
+- Integración con Allure Reports.
+- Ejecución paralela en CI/CD.
+- Integración con Cypress Cloud.
+
+---
+
+## 👨‍💻 Autor
+
+**Herberth Barrios**
+
+GitHub:
+https://github.com/Danielito2252
+
+---
+
+## 📄 Licencia
+
+Este proyecto está distribuido bajo la licencia MIT.
